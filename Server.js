@@ -112,7 +112,7 @@
  
     //spinRight function
     ext.spinRight= function (speed){
-        var msg= 'spinLeft/' + speed;
+        var msg= 'spinRight/' + speed;
         sendCommand(msg);
     };
  
