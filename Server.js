@@ -79,10 +79,6 @@
 //                                 MOTOR FUNCTIONS
 //***********************************************************************************
 
-    ext.motorInstructions= function(){
-        alert("");
- 
-    };
  
     //Stop function
     ext.stop = function (){
@@ -183,7 +179,7 @@
             var msg= message.data;
             alert("State of irLeft= " + msg);
             irLeft = msg === "False";
-            alert(irLeft);
+ 
         };
 
     };
@@ -196,7 +192,7 @@
             var msg= message.data;
             alert("State of irRight= " + msg);
             irRight = msg === "False";
-            alert(irRight);
+ 
  
         };
 
@@ -210,7 +206,7 @@
             var msg= message.data;
             alert("State of irLeftLine= " + msg);
             irLeftLine = msg === "False";
-            alert(irLeftLine);
+ 
         };
 
     };
@@ -223,7 +219,7 @@
             var msg= message.data;
             alert("State of irRightLine = " + msg);
             irRightLine = msg === "False";
-            alert(irRightLine);
+ 
         };
 
     };
@@ -238,7 +234,7 @@
             var msg= message.data;
             alert("Distance= " + msg);
             distance = parseFloat(msg);
-            alert(distance);
+ 
  
         };
     };
@@ -258,8 +254,8 @@
         blocks: [
             // Block type, block name, function name
             //Motor Blocks
-            ['w', 'Set Server IPAddress/Port: %s : %s', 'set_Server', 'localhost', '1234'],
-            [' ', 'MOTOR BLOCK INSTRUCTIONS.', 'motorInstructions'],
+            ['w', 'Set Server- IPAddress/Port: %s : %s', 'set_Server', 'localhost', '1234'],
+            //[' ', 'MOTOR BLOCK INSTRUCTIONS.', 'motorInstructions'],
             [' ', 'Stop', 'stop'],
             [' ', 'Forward- Set Speed= %n', 'forward', '30'],
             [' ', 'Reverse- Set Speed= %n', 'reverse', '30'],
@@ -276,7 +272,7 @@
             // LED Blocks
             [' ', 'Set LED:%m.LEDNum Red:%n, Green:%n, Blue:%n', 'setLED', '1', '1000', '1000', '1000'],
             [' ', 'Set All LEDs- Red:%n, Green:%n, Blue:%n', 'setAllLEDs', '1000', '1000', '1000'],*/
-            [' ', 'Set White LED:%m.LEDNum Value:%n', 'LsetLED','1', '1000'],
+            [' ', 'Set White LED:%m.LEDNum Value:%m.onOff', 'LsetLED','1', '1'],
             //[' ', 'Set All White LEDs- Value:%n', 'LsetAllLEDs','1000'],
             // IR Sensor Blocks
             [' ', 'Left IR Obstacle sensor', 'irLeft'],
@@ -288,8 +284,10 @@
         ],
  
     menus: {
-        LEDNum: ['1', '2', '3', '4'],
+        LEDNum: ['1', '2'],// '3', '4'],
         servoNum: ['1', '2'],
+        onOff: ['0', '1'],
+ 
         },
  
     };
@@ -299,9 +297,3 @@
 })({});
 
 
-/*if(ipGobal === 'localhost' || ipGobal === '0')
-        {
-            alert("IP Address for this board was not set.");
-        }
- 
-        else*/
