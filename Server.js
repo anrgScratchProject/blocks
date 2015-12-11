@@ -272,7 +272,7 @@
             // LED Blocks
             [' ', 'Set LED:%m.LEDNum Red:%n, Green:%n, Blue:%n', 'setLED', '1', '1000', '1000', '1000'],
             [' ', 'Set All LEDs- Red:%n, Green:%n, Blue:%n', 'setAllLEDs', '1000', '1000', '1000'],*/
-            [' ', 'Set White LED:%m.LEDNum Value:%m.onOff', 'LsetLED','1', '1'],
+            [' ', 'Set White LED:%m.onOff Value:%m.onOff', 'LsetLED','1', '1'],
             //[' ', 'Set All White LEDs- Value:%n', 'LsetAllLEDs','1000'],
             // IR Sensor Blocks
             [' ', 'Left IR Obstacle sensor', 'irLeft'],
@@ -284,7 +284,7 @@
         ],
  
     menus: {
-        LEDNum: ['1', '2'],// '3', '4'],
+        //LEDNum: ['1', '2'], '3', '4'],
         servoNum: ['1', '2'],
         onOff: ['0', '1'],
  
