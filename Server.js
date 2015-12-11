@@ -129,14 +129,14 @@
     };
  
     //go function
-    ext.goM= function (leftSpeed, rightSpeed){
-        var msg= 'goM/' + leftSpeed + '/' + rightSpeed;
+    ext.go= function (leftSpeed, rightSpeed){
+        var msg= 'go/' + leftSpeed + '/' + rightSpeed;
         sendCommand(msg);
     };
 
     //go function
-    ext.go= function (speed){
-        var msg= 'go/' + speed;
+    ext.goBoth= function (speed){
+        var msg= 'goBoth/' + speed;
         sendCommand(msg);
     };
  
@@ -263,21 +263,21 @@
             [' ', 'Stop', 'stop'],
             [' ', 'Forward- Set Speed= %n', 'forward', '30'],
             [' ', 'Reverse- Set Speed= %n', 'reverse', '30'],
-            [' ', 'Spin Right- Set Speed= %n', 'spinLeft', '30'],
-            [' ', 'Spin Left- Set Speed= %n', 'spinRight', '30'],
+            [' ', 'Spin Right- Set Speed= %n', 'spinRight', '30'],
+            [' ', 'Spin Left- Set Speed= %n', 'spinLeft', '30'],
             [' ', 'Turn Forward- Set Right speed= %n : Set Left speed= %n', 'turnForward', '30', '30'],
             [' ', 'Turn Reverse- Set Right speed= %n : Set Left speed= %n', 'turnReverse', '30', '30'],
-            [' ', 'Go- Set Right speed= %n : Set Left speed= %n', 'goM', '30', '30'],
-            [' ', 'Go- Set Speed= %n', 'go', '30'],
+            [' ', 'Go- Set Right speed= %n : Set Left speed= %n', 'go', '30', '30'],
+            [' ', 'GoBoth- Set Speed= %n', 'goBoth', '30'],
             // Servo Blocks
-            [' ', 'Start Servos', 'startServos'],
+            /*[' ', 'Start Servos', 'startServos'],
             [' ', 'Stop Servos', 'stopServos'],
             [' ', 'Set Servos- Servo:%m.servoNum  Degrees= %n', 'setServo', '1', '30'],
             // LED Blocks
             [' ', 'Set LED:%m.LEDNum Red:%n, Green:%n, Blue:%n', 'setLED', '1', '1000', '1000', '1000'],
-            [' ', 'Set All LEDs- Red:%n, Green:%n, Blue:%n', 'setAllLEDs', '1000', '1000', '1000'],
+            [' ', 'Set All LEDs- Red:%n, Green:%n, Blue:%n', 'setAllLEDs', '1000', '1000', '1000'],*/
             [' ', 'Set White LED:%m.LEDNum Value:%n', 'LsetLED','1', '1000'],
-            [' ', 'Set All White LEDs- Value:%n', 'LsetAllLEDs','1000'],
+            //[' ', 'Set All White LEDs- Value:%n', 'LsetAllLEDs','1000'],
             // IR Sensor Blocks
             [' ', 'Left IR Obstacle sensor', 'irLeft'],
             [' ', 'Right IR Obstacle sensor', 'irRight'],
